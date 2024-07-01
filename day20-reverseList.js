@@ -26,6 +26,15 @@ var reverseList = function (head) {
   return bucketList;
 };
 
+//Solution from leetcode, it's beautiful!
+var reverseListByRecursion = function (head) {
+  if (!head || !head.next) return head;
+  reversedPart = reverseList(head.next);
+  head.next.next = head;
+  head.next = null;
+  return reversedPart;
+};
+
 //For self-testing
 function printList(head) {
   const result = [];
