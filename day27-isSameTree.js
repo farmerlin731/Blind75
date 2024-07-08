@@ -8,6 +8,8 @@
  */
 
 var isSameTree = function (p, q) {
+  //The following is more beautiful. :) @ Leetcode's solution
+  //if (!node1 || !node2) return !node1 && !node2;
   if (Object.is(p, null) && Object.is(q, null)) return true;
   if (Object.is(p, null) || Object.is(q, null)) return false;
   return (
